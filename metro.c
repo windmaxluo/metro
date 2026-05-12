@@ -44,6 +44,8 @@ void line_init_data()   //线路初始化
     strcpy(lines[1].stations[5],"琥牢山");
     strcpy(lines[1].stations[6],"望舒客栈");
 
+
+    //换程表手动写（临时）
     strcpy(transfer[0][1], "天空岛");   //一号线(0) 和 二号线(1) 可以在 "天空岛" 换乘
     strcpy(transfer[1][0], "天空岛");
 }
@@ -139,6 +141,67 @@ void print_segment(int line_id, const char *start, const char *end) //参数 线
 }
 
 
+//查询路径
+void find_path(const char *start, const char *end)  //参数 起点名字 终点名字
+{
+    int start_lines[MAX_LINES], start_cnt; //起点所包含线路id，start_cnt 计数线路条数 ，例如天空岛有一号线和二号线，这个数就为2
+    int end_lines[MAX_LINES], end_cnt;//终点所包含线路
+    
+    find_lines_by_station(start, start_lines, &start_cnt);  //查找起点所在线路 和 存在的线路条数
+    find_lines_by_station(end, end_lines, &end_cnt);
+
+    //情况一 站点不存在于任何当前线路
+    if (start_cnt==0||end_cnt==0)
+    {
+        printf("所输站点中找不到对应线路\n");
+        return;
+    }
+    
+    //情况二 站点位于同一条线路，例如皆为一号线
+    for (int i = 0; i < start_cnt; i++)  
+    {
+        if (line_contains_station(start_lines[i],end)) //end和start有公共线路
+        {
+            printf("无需换乘，直接乘坐 %s\n", lines[start_lines[i]].name);
+            print_segment(start_lines[i], start, end);
+            return;
+        }
+    }
+
+    //情况三 一次换乘
+    for (int i = 0; i < start_cnt; i++)  //遍历开始站点的线路
+    {
+        int l_start = start_lines[i];    //临时存放线路id
+        for (int j = 0; j < end_cnt; j++)
+        {
+            int l_end = end_lines[j];
+            if (transfer[l_start][l_end][0] != '\0')//换乘表判断有无公共站点
+            {
+                char *transfer_station = transfer[l_start][l_end];//指针接收公共站点名字字符串
+                print_segment(l_start,start,transfer_station);
+                printf("在%s换乘\n",transfer_station);
+                print_segment(l_end,transfer_station,end);
+            }
+            
+        }
+        
+
+
+    }
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 int main(int argc, char const *argv[])
 {
@@ -176,9 +239,11 @@ int main(int argc, char const *argv[])
     printf("%d\n",start_cnt);
     */
 
-    print_segment(0,"蒙德城","天空岛");
-    print_segment(0,"天空岛","蒙德城");
-    print_segment(1,"天空岛","望舒客栈");
+    // print_segment(0,"蒙德城","天空岛");
+    // print_segment(0,"天空岛","蒙德城");
+    // print_segment(1,"天空岛","望舒客栈");
+
+    find_path("蒙德城","沉玉谷");
 
     return 0;
 }
