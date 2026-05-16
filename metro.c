@@ -19,6 +19,49 @@ int line_count = 2;      //定义线路数量 现在为2 即2条线路
 // 构建手动换乘表 (临时方案在init_line_data 中设置)
 char transfer[MAX_LINES][MAX_LINES][NAME_MAX_LEN];//源线路id 目标线路id 存储换乘站名字符串
 
+//自动构建换乘表
+void build_transfer_graph()
+{
+    //初始化：全部设置为空 （表示不连通）
+    for (int i = 0; i < MAX_LINES; i++)
+    {
+        for ( int j = 0; j < MAX_LINES; j++)
+        {
+            strcpy(transfer[i][j],"\0");
+        }
+    }
+
+    //构建所有线路的公共站点
+    for (int i = 0; i < line_count; i++)     //遍历线路
+    {
+        for (int j = i+1; j < line_count; j++)   //遍历线路
+        {
+            for (int i_station = 0; i_station < lines[i].station_count; i_station++) //遍历站点
+            {
+                for (int j_station = 0;  j_station< lines[j].station_count; j_station++)
+                {
+                    if (strcmp(lines[i].stations[i_station],lines[j].stations[j_station])==0) //有公共站点
+                    {
+                        strcpy(transfer[i][j],lines[i].stations[i_station]);
+                        strcpy(transfer[j][i],lines[i].stations[i_station]);   //双向
+
+                        //只存一个公共站点 对于最少换乘次数并没有影响
+                        i_station = lines[i].station_count; //快速跳出i_station的那层循环
+                        break; //快速跳出j_station的循环
+                    }
+                }
+                
+            }
+            
+
+
+
+        }
+
+    }
+    
+}
+
 void line_init_data()   //线路初始化
 {
     lines[0].id=0;
@@ -46,8 +89,8 @@ void line_init_data()   //线路初始化
 
 
     //换程表手动写（临时）
-    strcpy(transfer[0][1], "天空岛");   //一号线(0) 和 二号线(1) 可以在 "天空岛" 换乘
-    strcpy(transfer[1][0], "天空岛");
+//    strcpy(transfer[0][1], "天空岛");   //一号线(0) 和 二号线(1) 可以在 "天空岛" 换乘
+//    strcpy(transfer[1][0], "天空岛");
 }
 
 
@@ -179,7 +222,7 @@ void find_path(const char *start, const char *end)  //参数 起点名字 终点
             {
                 char *transfer_station = transfer[l_start][l_end];//指针接收公共站点名字字符串
                 print_segment(l_start,start,transfer_station);
-                printf("在%s换乘\n",transfer_station);
+                printf("在%s换乘\n",transfer_station);//不要解引用，%s 要的是字符串地址，不是单个字符；char* 指针变量本身就是地址，直接用变量名；
                 print_segment(l_end,transfer_station,end);
             }
             
@@ -243,7 +286,24 @@ int main(int argc, char const *argv[])
     // print_segment(0,"天空岛","蒙德城");
     // print_segment(1,"天空岛","望舒客栈");
 
-    find_path("蒙德城","沉玉谷");
+    //find_path("蒙德城","沉玉谷");
+
+
+    build_transfer_graph();
+
+    for (int i = 0; i < MAX_LINES; i++)
+    {
+        for ( int j = 0; j < MAX_LINES; j++)
+        {
+            printf("%-10s ",transfer[i][j]);
+            if (j==MAX_LINES-1)
+            {
+               printf("\n");
+            }
+            
+        }
+    }
+
 
     return 0;
 }
