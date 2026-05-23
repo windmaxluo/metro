@@ -143,7 +143,7 @@ void find_lines_by_station(const char *station, int line_ids[], int *count)
     {
         if (line_contains_station(i, station))
         {
-            line_ids[*count] = i;
+            line_ids[*count] = i;      //包含该站点的线路存到line_ids[]数组里面记住；
             (*count)++;
         }
     }

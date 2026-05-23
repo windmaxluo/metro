@@ -1,0 +1,252 @@
+// ==================== 长沙地铁1号线 ====================
+    lines[0].id = 0;
+    strcpy(lines[0].name, "1号线");
+    lines[0].station_count = 25;
+    strcpy(lines[0].stations[0], "金盆丘");
+    strcpy(lines[0].stations[1], "金霞");
+    strcpy(lines[0].stations[2], "鹅羊山");
+    strcpy(lines[0].stations[3], "秀峰山");
+    strcpy(lines[0].stations[4], "宿龙桥");
+    strcpy(lines[0].stations[5], "开福区政府");
+    strcpy(lines[0].stations[6], "马厂");
+    strcpy(lines[0].stations[7], "北辰三角洲");
+    strcpy(lines[0].stations[8], "开福寺");
+    strcpy(lines[0].stations[9], "文昌阁");
+    strcpy(lines[0].stations[10], "培元桥");
+    strcpy(lines[0].stations[11], "五一广场");
+    strcpy(lines[0].stations[12], "黄兴广场");
+    strcpy(lines[0].stations[13], "南门口");
+    strcpy(lines[0].stations[14], "侯家塘");
+    strcpy(lines[0].stations[15], "南湖路");
+    strcpy(lines[0].stations[16], "黄土岭");
+    strcpy(lines[0].stations[17], "涂家冲");
+    strcpy(lines[0].stations[18], "铁道学院");
+    strcpy(lines[0].stations[19], "友谊路");
+    strcpy(lines[0].stations[20], "省政府");
+    strcpy(lines[0].stations[21], "桂花坪");
+    strcpy(lines[0].stations[22], "大托");
+    strcpy(lines[0].stations[23], "中信广场");
+    strcpy(lines[0].stations[24], "尚双塘");
+
+    // ==================== 长沙地铁2号线 ====================
+    lines[1].id = 1;
+    strcpy(lines[1].name, "2号线");
+    lines[1].station_count = 23;
+    strcpy(lines[1].stations[0], "梅溪湖西");
+    strcpy(lines[1].stations[1], "麓云路");
+    strcpy(lines[1].stations[2], "文化艺术中心");
+    strcpy(lines[1].stations[3], "梅溪湖东");
+    strcpy(lines[1].stations[4], "望城坡");
+    strcpy(lines[1].stations[5], "金星路");
+    strcpy(lines[1].stations[6], "西湖公园");
+    strcpy(lines[1].stations[7], "溁湾镇");
+    strcpy(lines[1].stations[8], "橘子洲");
+    strcpy(lines[1].stations[9], "湘江中路");
+    strcpy(lines[1].stations[10], "五一广场");
+    strcpy(lines[1].stations[11], "芙蓉广场");
+    strcpy(lines[1].stations[12], "迎宾路口");
+    strcpy(lines[1].stations[13], "袁家岭");
+    strcpy(lines[1].stations[14], "长沙火车站");
+    strcpy(lines[1].stations[15], "锦泰广场");
+    strcpy(lines[1].stations[16], "万家丽广场");
+    strcpy(lines[1].stations[17], "人民东路");
+    strcpy(lines[1].stations[18], "长沙大道");
+    strcpy(lines[1].stations[19], "沙湾公园");
+    strcpy(lines[1].stations[20], "杜花路");
+    strcpy(lines[1].stations[21], "长沙火车南站");
+    strcpy(lines[1].stations[22], "光达");
+
+    // ==================== 长沙地铁3号线 ====================
+    lines[2].id = 2;
+    strcpy(lines[2].name, "3号线");
+    lines[2].station_count = 25;
+    strcpy(lines[2].stations[0], "广生");
+    strcpy(lines[2].stations[1], "螺丝塘");
+    strcpy(lines[2].stations[2], "星沙文体中心");
+    strcpy(lines[2].stations[3], "松雅湖");
+    strcpy(lines[2].stations[4], "星沙");
+    strcpy(lines[2].stations[5], "湘龙");
+    strcpy(lines[2].stations[6], "月湖公园北");
+    strcpy(lines[2].stations[7], "长沙大学");
+    strcpy(lines[2].stations[8], "雅雀湖");
+    strcpy(lines[2].stations[9], "四方坪");
+    strcpy(lines[2].stations[10], "丝茅冲");
+    strcpy(lines[2].stations[11], "烈士公园东");
+    strcpy(lines[2].stations[12], "长沙火车站");
+    strcpy(lines[2].stations[13], "朝阳村");
+    strcpy(lines[2].stations[14], "阿弥岭");
+    strcpy(lines[2].stations[15], "桂花公园");
+    strcpy(lines[2].stations[16], "东塘");
+    strcpy(lines[2].stations[17], "侯家塘");
+    strcpy(lines[2].stations[18], "灵官渡");
+    strcpy(lines[2].stations[19], "阜埠河");
+    strcpy(lines[2].stations[20], "中南大学");
+    strcpy(lines[2].stations[21], "阳光");
+    strcpy(lines[2].stations[22], "洋湖新城");
+    strcpy(lines[2].stations[23], "洋湖湿地");
+    strcpy(lines[2].stations[24], "山塘");
+
+    // ==================== 长沙地铁4号线 ====================
+    lines[3].id = 3;
+    strcpy(lines[3].name, "4号线");
+    lines[3].station_count = 25;
+    strcpy(lines[3].stations[0], "罐子岭");
+    strcpy(lines[3].stations[1], "月亮岛西");
+    strcpy(lines[3].stations[2], "湘江新城");
+    strcpy(lines[3].stations[3], "汉王陵公园");
+    strcpy(lines[3].stations[4], "福元大桥西");
+    strcpy(lines[3].stations[5], "茶子山");
+    strcpy(lines[3].stations[6], "观沙岭");
+    strcpy(lines[3].stations[7], "六沟垅");
+    strcpy(lines[3].stations[8], "望月湖");
+    strcpy(lines[3].stations[9], "溁湾镇");
+    strcpy(lines[3].stations[10], "湖南师大");
+    strcpy(lines[3].stations[11], "湖南大学");
+    strcpy(lines[3].stations[12], "阜埠河");
+    strcpy(lines[3].stations[13], "碧沙湖");
+    strcpy(lines[3].stations[14], "黄土岭");
+    strcpy(lines[3].stations[15], "砂子塘");
+    strcpy(lines[3].stations[16], "赤岗岭");
+    strcpy(lines[3].stations[17], "树木岭");
+    strcpy(lines[3].stations[18], "圭塘");
+    strcpy(lines[3].stations[19], "沙湾公园");
+    strcpy(lines[3].stations[20], "粟塘");
+    strcpy(lines[3].stations[21], "平阳");
+    strcpy(lines[3].stations[22], "长沙火车南站");
+    strcpy(lines[3].stations[23], "光达");
+    strcpy(lines[3].stations[24], "杜家坪");
+
+    // ==================== 长沙地铁5号线 ====================
+    lines[4].id = 4;
+    strcpy(lines[4].name, "5号线");
+    lines[4].station_count = 18;
+    strcpy(lines[4].stations[0], "毛竹塘");
+    strcpy(lines[4].stations[1], "板塘冲");
+    strcpy(lines[4].stations[2], "大塘");
+    strcpy(lines[4].stations[3], "雨花区政府");
+    strcpy(lines[4].stations[4], "木桥");
+    strcpy(lines[4].stations[5], "圭塘");
+    strcpy(lines[4].stations[6], "高桥南");
+    strcpy(lines[4].stations[7], "高桥北");
+    strcpy(lines[4].stations[8], "芙蓉区政府");
+    strcpy(lines[4].stations[9], "万家丽广场");
+    strcpy(lines[4].stations[10], "马王堆");
+    strcpy(lines[4].stations[11], "火炬村");
+    strcpy(lines[4].stations[12], "鸭子铺");
+    strcpy(lines[4].stations[13], "马栏山");
+    strcpy(lines[4].stations[14], "月湖公园北");
+    strcpy(lines[4].stations[15], "白茅铺");
+    strcpy(lines[4].stations[16], "土桥");
+    strcpy(lines[4].stations[17], "水渡河");
+
+    // ==================== 长沙地铁6号线 ====================
+    lines[5].id = 5;
+    strcpy(lines[5].name, "6号线");
+    lines[5].station_count = 30;
+    strcpy(lines[5].stations[0], "谢家桥");
+    strcpy(lines[5].stations[1], "象鼻窝");
+    strcpy(lines[5].stations[2], "中塘");
+    strcpy(lines[5].stations[3], "一师范西校区");
+    strcpy(lines[5].stations[4], "长庆");
+    strcpy(lines[5].stations[5], "和馨园");
+    strcpy(lines[5].stations[6], "长丰");
+    strcpy(lines[5].stations[7], "麓谷");
+    strcpy(lines[5].stations[8], "涧塘");
+    strcpy(lines[5].stations[9], "湖南工商大学");
+    strcpy(lines[5].stations[10], "白鸽咀");
+    strcpy(lines[5].stations[11], "湘雅三医院");
+    strcpy(lines[5].stations[12], "六沟垅");
+    strcpy(lines[5].stations[13], "文昌阁");
+    strcpy(lines[5].stations[14], "湘雅医院");
+    strcpy(lines[5].stations[15], "烈士公园南");
+    strcpy(lines[5].stations[16], "迎宾路口");
+    strcpy(lines[5].stations[17], "窑岭");
+    strcpy(lines[5].stations[18], "朝阳村");
+    strcpy(lines[5].stations[19], "芙蓉区政府");
+    strcpy(lines[5].stations[20], "人民东路");
+    strcpy(lines[5].stations[21], "花桥");
+    strcpy(lines[5].stations[22], "水稻博物馆");
+    strcpy(lines[5].stations[23], "农科院农大");
+    strcpy(lines[5].stations[24], "东湖");
+    strcpy(lines[5].stations[25], "韶光");
+    strcpy(lines[5].stations[26], "龙华");
+    strcpy(lines[5].stations[27], "檀木桥");
+    strcpy(lines[5].stations[28], "曹家坪");
+    strcpy(lines[5].stations[29], "大路村");
+    strcpy(lines[5].stations[30], "木马塅");
+    strcpy(lines[5].stations[31], "黄花机场T1T2");
+    strcpy(lines[5].stations[32], "黄花机场T3");
+    strcpy(lines[5].stations[33], "长沙黄花国际机场");
+
+
+
+
+
+
+// ==================== 一号线 ====================
+    lines[0].id = 0;
+    strcpy(lines[0].name, "一号线");
+    lines[0].station_count = 8;
+    strcpy(lines[0].stations[0], "蒙德城");
+    strcpy(lines[0].stations[1], "璃月港");
+    strcpy(lines[0].stations[2], "稻妻城");
+    strcpy(lines[0].stations[3], "天空岛");
+    strcpy(lines[0].stations[4], "龙脊雪山");
+    strcpy(lines[0].stations[5], "层岩巨渊");
+    strcpy(lines[0].stations[6], "赤王陵");
+    strcpy(lines[0].stations[7], "渊下宫");
+
+    // ==================== 二号线 ====================
+    lines[1].id = 1;
+    strcpy(lines[1].name, "二号线");
+    lines[1].station_count = 7;
+    strcpy(lines[1].stations[0], "果酒湖");
+    strcpy(lines[1].stations[1], "摘星崖");
+    strcpy(lines[1].stations[2], "千风神殿");
+    strcpy(lines[1].stations[3], "天空岛");
+    strcpy(lines[1].stations[4], "沉玉谷");
+    strcpy(lines[1].stations[5], "琥牢山");
+    strcpy(lines[1].stations[6], "望舒客栈");
+
+    // ==================== 三号线 ====================
+    lines[2].id = 2;
+    strcpy(lines[2].name, "三号线");
+    lines[2].station_count = 6;
+    strcpy(lines[2].stations[0], "须弥城");
+    strcpy(lines[2].stations[1], "奥摩斯港");
+    strcpy(lines[2].stations[2], "桓那兰那");
+    strcpy(lines[2].stations[3], "赤王陵");
+    strcpy(lines[2].stations[4], "阿如村");
+    strcpy(lines[2].stations[5], "沙漠神殿");
+
+    // ==================== 四号线 ====================
+    lines[3].id = 3;
+    strcpy(lines[3].name, "四号线");
+    lines[3].station_count = 6;
+    strcpy(lines[3].stations[0], "枫丹廷");
+    strcpy(lines[3].stations[1], "沫芒宫");
+    strcpy(lines[3].stations[2], "茉洁站");
+    strcpy(lines[3].stations[3], "璃月港");
+    strcpy(lines[3].stations[4], "明蕴镇");
+    strcpy(lines[3].stations[5], "层岩巨渊");
+
+    // ==================== 五号线 ====================
+    lines[4].id = 4;
+    strcpy(lines[4].name, "五号线");
+    lines[4].station_count = 6;
+    strcpy(lines[4].stations[0], "纳塔");
+    strcpy(lines[4].stations[1], "隆崛谷");
+    strcpy(lines[4].stations[2], "晶蝶谷");
+    strcpy(lines[4].stations[3], "龙脊雪山");
+    strcpy(lines[4].stations[4], "雪葬之都");
+    strcpy(lines[4].stations[5], "寒天之钉");
+
+    // ==================== 六号线 ====================
+    lines[5].id = 5;
+    strcpy(lines[5].name, "六号线");
+    lines[5].station_count = 5;
+    strcpy(lines[5].stations[0], "至冬宫");
+    strcpy(lines[5].stations[1], "挪德卡莱");
+    strcpy(lines[5].stations[2], "渊下宫");
+    strcpy(lines[5].stations[3], "珊瑚宫");
+    strcpy(lines[5].stations[4], "海祇岛");
